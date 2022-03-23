@@ -120,6 +120,7 @@ public class AsymmetricEncoding {
     public static void createFileFromByteArray(String path, byte[] bytes) throws IOException {
         FileOutputStream fos = new FileOutputStream(path);
         fos.write(bytes);
+        fos.flush();
         fos.close();
     }
 }
